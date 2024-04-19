@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios</title>
+    <link rel="stylesheet" bref="css/index.css" />
+  </head>
+  <body>
+    <script>
+      function Click() {
+        alert("Clickkkk");
+      }
+      function Prueba() {
+        document.getElementById("demo").innerHTML = ":(";
+      }
+    </script>
+    <form>
+      <label for="nombre">Escribe tu nombre:</label>
+      <input type="" id="nombre" placeholder="Escribe tu nombre" />
+      <input type="password" id="pass" />
+      <input type="email" name="" />
+      <br /><br />
+      <label for="genero">¿Cual es tu genero?:</label>
+      <input type="radio" name="genero" />Hombre
+      <input type="radio" name="genero" />Mujer
+      <input type="radio" name="genero" />Otro <br /><br />
+      <input type="button" value="Enviar" />
+      <input type="submit" value="Enviar consulta" />
+      <select>
+        <option value="Mexico">Mexico</option>
+        <option value="España">España</option>
+        <option value="Italia">Italia</option>
+      </select>
+      <input type="color" name="" />
+      <input type="range" name="" />
+      <br /><br />
+      <br /><br />
+      <br /><br />
+      <p style="font-weight: bolder; font-size: 1.5em">
+        Cosas de JS Eventos del click
+      </p>
+      <button onclick="Click()">Click</button>
+      <button onmousemove="Click()">Movimiento</button>
+      <button ondblclick="Click()">Doble Click</button>
+      <button id="demo" onmousemove="Prueba()">NO te pongas encima :D</button>
+    </form>
+  </body>
+</html>
