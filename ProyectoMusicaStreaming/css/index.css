@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "MiFuentePersonalizada";
+  src: url("fonts/AmazonEmber_Bd.ttf") format("truetype");
+  font-weight: lighter;
+  font-style: normal;
+}
+body {
+  font-family: "MiFuentePersonalizada", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+header {
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "MiFuentePersonalizada", sans-serif;
+  position: sticky;
+  top: 0px;
+  background: transparent;
+  backdrop-filter: blur(150px);
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+  margin-left: 0;
+  margin-top: 12%;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a:link {
+  color: #25d1da;
+  text-decoration: none;
+}
+nav ul li a {
+  font-size: large;
+  color: #25d1da;
+  transition-duration: 0.4s;
+}
+nav ul li a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  color: #6de5f2;
+  text-decoration: none;
+}
+nav ul li a:active {
+  color: #25d1da;
+  text-decoration: none;
+}
+
+nav ul li:last-child {
+  margin-right: auto;
+}
+.search {
+  margin-left: 10%;
+}
+.search input {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+.search button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+}
+.login {
+  margin-left: 15%;
+}
+.login a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+.login a:hover {
+  color: #fff;
+}
+.white-bar {
+  width: 100%;
+  height: 10%;
+  background-color: white;
+}
+p {
+  color: white;
+}
+#contenedor {
+  margin-right: 10%;
+  margin-left: 10%;
+}

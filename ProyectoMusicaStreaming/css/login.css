@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "AmazonEmberBD";
+  src: url("../fonts/AmazonEmber_Bd.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AmazonEmberLT";
+  src: url("../fonts/AmazonEmber_Lt.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "AmazonEmberBD", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+#contenedor {
+  text-align: center;
+  margin: 0 auto;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.iniciosesion {
+  border: 1px solid;
+  margin-top: 2%;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+  text-align: left;
+}
+img {
+  width: 130px;
+  height: 60px;
+}
+.title {
+  font-size: 2em;
+}
+.text-b {
+  font-size: 0.9em;
+}
+.text {
+  font-family: "AmazonEmberLT", sans-serif;
+  font-size: 0.8em;
+  text-align: center;
+}
+button {
+  background-color: #ffd814;
+  height: 30px;
+  width: 100%;
+  border-radius: 7px;
+  border: 0px;
+  text-decoration: none;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #f0b800;
+}
+input {
+  width: 100%;
+}

