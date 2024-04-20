@@ -1,14 +1,14 @@
 @font-face {
   font-family: "MiFuentePersonalizada";
-  src: url("fonts/AmazonEmber_Bd.ttf") format("truetype");
-  font-weight: lighter;
+  src: url("../fonts/AmazonEmber_Bd.ttf") format("truetype");
+  font-weight: normal;
   font-style: normal;
 }
 body {
   font-family: "MiFuentePersonalizada", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: black;
+  background-color: #020202;
 }
 
 header {
@@ -48,6 +48,12 @@ nav ul li a {
   font-size: large;
   color: #25d1da;
   transition-duration: 0.4s;
+}
+nav ul li a img {
+  width: 24px;
+  height: 24px;
+  color: #25d1da;
+  background-color: #25d1da;
 }
 nav ul li a:visited {
   color: #fff;
@@ -107,4 +113,47 @@ p {
 #contenedor {
   margin-right: 10%;
   margin-left: 10%;
+}
+.podcasts div {
+  display: inline-block;
+  margin: 12px;
+  position: relative;
+  height: 190px;
+}
+.podcasts img {
+  width: 150px;
+  height: 150px;
+  border-radius: 6px;
+}
+.titulo {
+  position: absolute;
+  top: 140px;
+  font-size: 0.9em;
+}
+.subtitulo {
+  position: absolute;
+  top: 165px;
+  font-size: 0.7em;
+  color: #9a9c9c;
+}
+.seccion {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+.seccion .derecha {
+  font-size: 0.7em;
+}
+.pasar {
+  padding-left: 120px;
+  padding-right: 60px;
+}
+.todo {
+  border-style: solid;
+  border-color: #282929;
+  border-width: 1px;
+  margin-left: 60px;
+  padding: 7px 14px 7px 14px;
+  border-radius: 18px;
+  background-color: #282929;
 }

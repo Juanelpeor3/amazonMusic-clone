@@ -1,14 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="og:image" content="img-login/amazon_logo_a" />
-    <title>Amazon Music|Login</title>
+    <link rel="shortcut icon" href="img-login/amazon_logo_a.png" />
+    <title>Amazon Music | Login</title>
     <link rel="stylesheet" href="css/login.css" />
   </head>
   <body>
     <script type="text/javascript">
+      function MostrarVentana() {
+        document.getElementById("login").style.display = "block";
+        document.getElementById("login").style.width = "100%";
+        document.getElementById("login").style.height = "100%";
+        document.getElementById("login").style.opacity = "1";
+
+        //Redireccion de pagina
+        var intervaloRecarga = setInterval(function () {
+          location.replace("http://127.0.0.1:5500");
+          //numero muy grande
+        }, 1000000000000000000000000000000000000);
+      }
       function ContinuarLink() {
         const url = new URL(window.location.href);
         const inputCorreo = document.querySelector('input[name="correo"]');
@@ -19,11 +31,13 @@
         url.searchParams.set("password", valorPass);
         window.location.href = url;
         if (valorPass === "user" && valorCorreo === "user") {
+          MostrarVentana();
           location.replace("http://127.0.0.1:5500");
         } else {
           window.location.reload();
         }
       }
+
       //   function ContinuarLink() {
       //     const url = new URL(window.location.href);
 
@@ -74,6 +88,27 @@
           nuestro Aviso sobre anuncios basados en intereses.
         </p>
       </div>
+    </div>
+    <div id="login">
+      <p>¡Bienvenido!</p>
+      <!-- loader -->
+      <div class="loadership_IGCGT">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <p class="small">
+        Se le redirigirá a la pagina de Inicio.<br />Esto puede tardar unos
+        segundos...
+      </p>
     </div>
   </body>
 </html>
