@@ -216,56 +216,29 @@ p {
   height: 100px;
   background-color: purple;
 }
+/* mover div en casa */
 #botones {
-  position: relative;
-  display: inline-flex;
-  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #a2a5a8;
 }
-#anterior,
-#despausa,
-#pausa,
-#siguiente {
-  position: absolute;
-}
-#anterior {
-  color: #b1b4b8;
-  padding-left: 120px;
-}
-#anterior svg {
-  width: 30px;
-  height: auto;
+#botones button {
+  margin-right: 10px; /* Add spacing between buttons */
+  border: none; /* Remove default button border */
+  background-color: transparent; /* Remove default button background */
 }
 #despausa {
-  color: black;
-  border-radius: 40px;
-  background-color: white;
-  margin-left: 160px;
-  opacity: 0;
-  display: hidden;
-}
-#despausa svg {
-  width: 30px;
-  height: auto;
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin-right: -20px;
 }
 #pausa {
-  color: black;
-  border-radius: 40px;
-  background-color: white;
-  background-color: white;
-  margin-left: 160px;
-  opacity: 0;
-}
-#pausa svg {
-  width: 30px;
-  height: auto;
-}
-#siguiente {
-  color: #b1b4b8;
-  padding-left: 200px;
-}
-#siguiente svg {
-  width: 30px;
-  height: auto;
+  position: relative;
+  z-index: 0;
+  display: none;
+  margin-left: -20px;
 }
 /* Slider */
 .slider {
@@ -277,7 +250,6 @@ p {
   margin-left: 300px;
   padding-left: 120px;
 }
-
 .slider:hover {
   opacity: 1;
 }

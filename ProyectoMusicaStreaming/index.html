@@ -203,10 +203,9 @@
     </div>
     <div id="reproductor">
       <div id="botones">
-        <div id="anterior">
+        <button>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-player-skip-back-filled"
             width="44"
             height="44"
             viewBox="0 0 24 24"
@@ -215,6 +214,7 @@
             fill="none"
             stroke-linecap="round"
             stroke-linejoin="round"
+            id="anterior"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path
@@ -228,8 +228,8 @@
               fill="currentColor"
             />
           </svg>
-        </div>
-        <div id="despausa" onclick="AlternarPausado()">
+        </button>
+        <button onclick="AlternarPausado()">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="icon icon-tabler icon-tabler-player-play-filled"
@@ -241,6 +241,7 @@
             fill="none"
             stroke-linecap="round"
             stroke-linejoin="round"
+            id="despausa"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path
@@ -249,8 +250,9 @@
               fill="currentColor"
             />
           </svg>
-        </div>
-        <div id="pausa">
+        </button>
+
+        <button onclick="AlternarPausado()">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="icon icon-tabler icon-tabler-player-pause-filled"
@@ -262,6 +264,7 @@
             fill="none"
             stroke-linecap="round"
             stroke-linejoin="round"
+            id="pausa"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path
@@ -275,8 +278,9 @@
               fill="currentColor"
             />
           </svg>
-        </div>
-        <div id="siguiente">
+        </button>
+
+        <button>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="icon icon-tabler icon-tabler-player-skip-forward-filled"
@@ -288,6 +292,7 @@
             fill="none"
             stroke-linecap="round"
             stroke-linejoin="round"
+            id="siguiente"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path
@@ -301,7 +306,7 @@
               fill="currentColor"
             />
           </svg>
-        </div>
+        </button>
       </div>
       <div id="slider">
         <input
@@ -314,7 +319,24 @@
         />
       </div>
     </div>
-
+    <script>
+      function AlternarPausado() {
+        var despausa = document.getElementById("despausa");
+        var pausa = document.getElementById("pausa");
+        if (despausa.style.display == "block") {
+          despausa.style.display = "none";
+          pausa.style.display = "block";
+          pausa.style.zIndex = "1";
+          despausa.style.zIndex = "0";
+        } else {
+          pausa.style.display = "none";
+          despausa.style.display = "block";
+          despausa.style.zIndex = "1";
+          pausa.style.zIndex = "0";
+        }
+      }
+    </script>
     <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/volver.js"></script>
   </body>
 </html>

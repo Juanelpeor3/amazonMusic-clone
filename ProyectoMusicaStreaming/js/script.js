@@ -26,13 +26,3 @@ rightButton.addEventListener("click", () => {
     }px)`;
   }
 });
-function MostrarMenuBiblioteca() {
-  document.getElementById("login").style.display = "block";
-  document.getElementById("login").style.width = "100%";
-  document.getElementById("login").style.height = "100%";
-  document.getElementById("login").style.opacity = "1";
-}
-function AlternarPausado() {
-  document.getElementById("pausa").style.opacity = "1";
-  document.getElementById("pausa").style.display = "block";
-}

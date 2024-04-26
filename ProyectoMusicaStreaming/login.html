@@ -14,12 +14,6 @@
         document.getElementById("login").style.width = "100%";
         document.getElementById("login").style.height = "100%";
         document.getElementById("login").style.opacity = "1";
-
-        //Redireccion de pagina
-        var intervaloRecarga = setInterval(function () {
-          location.replace("http://127.0.0.1:5500");
-          //numero muy grande
-        }, 1000000000000000000000000000000000000);
       }
       function ContinuarLink() {
         const url = new URL(window.location.href);
@@ -32,7 +26,11 @@
         window.location.href = url;
         if (valorPass === "user" && valorCorreo === "user") {
           MostrarVentana();
-          location.replace("http://127.0.0.1:5500");
+          //Redireccion hacia la pagina
+          var intervaloRecarga = setInterval(function () {
+            location.replace("index.html" + "?user=" + valorCorreo);
+            //numero muy grande
+          }, 1000000000000000000000000000000000000);
         } else {
           window.location.reload();
         }
