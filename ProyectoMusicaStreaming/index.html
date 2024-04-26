@@ -146,6 +146,18 @@
       </div>
     </header>
     <div id="contenedor">
+      <div id="bienvenida">
+        <h1 id="saludo"></h1>
+        <script>
+          let url = new URL(window.location.href);
+          let param = url.searchParams.get("user");
+          function mostrarSaludo() {
+            var saludoElemento = document.getElementById("saludo");
+            saludoElemento.textContent = "¡Hola, " + param + "!";
+          }
+          window.onload = mostrarSaludo;
+        </script>
+      </div>
       <div class="seccion">
         <p class="tituloseccion">Los podcasts del momento</p>
         <p class="izquierda pasar">&lt;</p>
@@ -154,7 +166,11 @@
       </div>
       <div class="podcasts" data-bs-ride="carousel">
         <div class="song">
-          <img src="img-login/amazon_logo_a.png" alt="" />
+          <img
+            src="img-login/amazon_logo_a.png"
+            alt=""
+            onclick="musica('p1')"
+          />
           <p class="titulo">Prueba1</p>
           <p class="subtitulo">PruebaPequeño</p>
         </div>
@@ -336,7 +352,8 @@
         }
       }
     </script>
-    <script type="module" src="js/script.js"></script>
-    <script type="module" src="js/volver.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/volver.js"></script>
+    <script src="js/cancion.js"></script>
   </body>
 </html>

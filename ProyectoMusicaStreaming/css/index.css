@@ -70,8 +70,6 @@ nav ul li a:hover {
   z-index: 10;
   left: 29.5%;
 }
-#biblioteca {
-}
 .search {
   margin-left: 10%;
 }
@@ -121,6 +119,9 @@ p {
   width: 1300px; /* Ajustar si no es suficiente */
   margin: 0 auto;
   overflow: hidden;
+}
+#bienvenida {
+  color: #fff;
 }
 .podcasts div {
   display: inline-block;
@@ -176,6 +177,7 @@ p {
   width: 100%;
   height: 150px; /* Ajustar si no es suficiente */
   margin-bottom: 10px;
+  cursor: pointer;
 }
 .pasar {
   font-size: 0.8em;
@@ -211,34 +213,56 @@ p {
 }
 /* Parte reproductor */
 #reproductor {
+  border-top: 1px solid #2f3030;
   margin-top: 160px;
   bottom: 0px;
   height: 100px;
-  background-color: purple;
+  background-color: #1c1c1c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
 }
-/* mover div en casa */
+/* Parte botones del reproductor */
 #botones {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #a2a5a8;
+}
+#botones button svg {
+  color: #9a9c9c;
+}
+#botones button svg:hover {
+  color: #646668;
+}
+#botones button #despausa,
+#botones button #pausa {
+  color: black;
+  background-color: white;
+}
+#botones button #despausa:hover,
+#botones button #pausa:hover {
+  color: #151414;
+  background-color: #cac3c3;
 }
 #botones button {
-  margin-right: 10px; /* Add spacing between buttons */
-  border: none; /* Remove default button border */
-  background-color: transparent; /* Remove default button background */
+  margin-right: 10px;
+  border: none;
+  background-color: transparent;
 }
 #despausa {
   position: relative;
   z-index: 1;
   display: block;
   margin-right: -20px;
+  border-radius: 30px;
 }
 #pausa {
   position: relative;
   z-index: 0;
   display: none;
   margin-left: -20px;
+  border-radius: 30px;
 }
 /* Slider */
 .slider {
@@ -248,7 +272,7 @@ p {
   -webkit-transition: 0.2s;
   transition: opacity 0.2s;
   margin-left: 300px;
-  padding-left: 120px;
+  width: 200px;
 }
 .slider:hover {
   opacity: 1;
