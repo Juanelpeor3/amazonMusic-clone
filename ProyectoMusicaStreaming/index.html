@@ -159,7 +159,7 @@
         </script>
       </div>
       <div class="seccion">
-        <p class="tituloseccion">Los podcasts del momento</p>
+        <p class="tituloseccion">Las canciones del momento</p>
         <p class="izquierda pasar">&lt;</p>
         <p class="derecha pasar">&gt;</p>
         <p class="todo">VER TODO</p>
@@ -171,8 +171,8 @@
             alt=""
             onclick="musica('p1')"
           />
-          <p class="titulo">Prueba1</p>
-          <p class="subtitulo">PruebaPequeño</p>
+          <p class="titulo">Maestro sin igual</p>
+          <p class="subtitulo">BadVicente,</p>
         </div>
         <div class="song">
           <img src="img-login/amazon_logo_a.png" alt="" />
@@ -199,26 +199,94 @@
           <p class="titulo">Prueba6</p>
           <p class="subtitulo">PruebaPequeño</p>
         </div>
+      </div>
+      <div class="seccion">
+        <p class="tituloseccion">Lo que no te puedes perder</p>
+        <p class="izquierda pasar">&lt;</p>
+        <p class="derecha pasar">&gt;</p>
+        <p class="todo">VER TODO</p>
+      </div>
+      <div class="perder" data-bs-ride="carousel">
+        <div class="song">
+          <img
+            src="img-login/amazon_logo_a.png"
+            alt=""
+            onclick="musica('p1')"
+          />
+          <p class="titulo">Maestro sin igual</p>
+          <p class="subtitulo">BadVicente,</p>
+        </div>
         <div class="song">
           <img src="img-login/amazon_logo_a.png" alt="" />
-          <p class="titulo">Prueba7</p>
+          <p class="titulo">Prueba2</p>
           <p class="subtitulo">PruebaPequeño</p>
         </div>
         <div class="song">
           <img src="img-login/amazon_logo_a.png" alt="" />
-          <p class="titulo">Prueba8</p>
+          <p class="titulo">Prueba3</p>
+          <p class="subtitulo">PruebaPequeño</p>
+        </div>
+        <div class="song">
+          <img src="img-login/amazon_logo_a.png" alt="" />
+          <p class="titulo">Prueba4</p>
           <p class="subtitulo">PruebaPequeño</p>
         </div>
       </div>
-      <p>UNA BACHATA en Primavera 🌸</p>
-      <p>Ganadores de los Premios Ondas</p>
-      <p>Seleccion de nuestros expertos</p>
-      <p>Hits y música nueva</p>
-      <p>ROMPE</p>
-      <p>Playlists populares</p>
+      <div class="seccion">
+        <p class="tituloseccion">El genero que mas gusta</p>
+        <p class="izquierda pasar">&lt;</p>
+        <p class="derecha pasar">&gt;</p>
+        <p class="todo">VER TODO</p>
+      </div>
+      <div class="podcasts" data-bs-ride="carousel">
+        <div class="song">
+          <img
+            src="img-login/amazon_logo_a.png"
+            alt=""
+            onclick="musica('p1')"
+          />
+          <p class="titulo">Maestro sin igual</p>
+          <p class="subtitulo">BadVicente,</p>
+        </div>
+        <div class="song">
+          <img src="img-login/amazon_logo_a.png" alt="" />
+          <p class="titulo">Prueba2</p>
+          <p class="subtitulo">PruebaPequeño</p>
+        </div>
+        <div class="song">
+          <img src="img-login/amazon_logo_a.png" alt="" />
+          <p class="titulo">Prueba3</p>
+          <p class="subtitulo">PruebaPequeño</p>
+        </div>
+        <div class="song">
+          <img src="img-login/amazon_logo_a.png" alt="" />
+          <p class="titulo">Prueba4</p>
+          <p class="subtitulo">PruebaPequeño</p>
+        </div>
+        <div class="song">
+          <img src="img-login/amazon_logo_a.png" alt="" />
+          <p class="titulo">Prueba5</p>
+          <p class="subtitulo">PruebaPequeño</p>
+        </div>
+        <div class="song">
+          <img src="img-login/amazon_logo_a.png" alt="" />
+          <p class="titulo">Prueba6</p>
+          <p class="subtitulo">PruebaPequeño</p>
+        </div>
+      </div>
     </div>
     <div id="reproductor">
       <div id="botones">
+        <div id="slidercancion">
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="slidercancion"
+            id="myRange"
+          />
+        </div>
         <button>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -330,8 +398,8 @@
           min="1"
           max="100"
           value="50"
-          class="slider"
-          id="myRange"
+          class="volumen"
+          id="volumen"
         />
       </div>
     </div>
@@ -352,7 +420,8 @@
         }
       }
     </script>
-    <script src="js/script.js"></script>
+    <script src="js/carrusel.js"></script>
+    <script src="js/carrusel-perder.js"></script>
     <script src="js/volver.js"></script>
     <script src="js/cancion.js"></script>
   </body>

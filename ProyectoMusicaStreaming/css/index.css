@@ -123,13 +123,15 @@ p {
 #bienvenida {
   color: #fff;
 }
-.podcasts div {
+.podcasts div,
+.perder div {
   display: inline-block;
   margin: 12px;
   position: relative;
   height: 190px;
 }
-.podcasts img {
+.podcasts img,
+.perder img {
   width: 150px;
   height: 150px;
   border-radius: 6px;
@@ -164,7 +166,8 @@ p {
   font-size: 1.2em;
   font-weight: bold;
 }
-.podcasts {
+.podcasts,
+.perder {
   display: flex;
   transition: transform 0.5s ease;
 }
@@ -264,17 +267,49 @@ p {
   margin-left: -20px;
   border-radius: 30px;
 }
-/* Slider */
-.slider {
+/* Slider cancion */
+#slidercancion {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  margin-left: 40%;
+}
+.slidercancion {
+  height: 5px;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  width: 100%;
+  appearance: none;
+  background-color: #646668;
+}
+.slidercancion:hover {
+  opacity: 1;
+}
+.slidercancion::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: purple;
+  cursor: pointer;
+}
+.slidercancion::-webkit-slider-thumb:hover {
+  width: 20px;
+  height: 20px;
+}
+/* Slider volumen*/
+.volumen {
   height: 25px;
   outline: none;
   opacity: 0.7;
   -webkit-transition: 0.2s;
   transition: opacity 0.2s;
-  margin-left: 300px;
+  margin-left: 490px;
   width: 200px;
 }
-.slider:hover {
+.volumen:hover {
   opacity: 1;
 }
 
