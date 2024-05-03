@@ -82,7 +82,7 @@
             >
           </li>
           <li>
-            <a href="#radio" class="linksprinc" id="biblioteca" onmousemove=""
+            <a href="#radio" class="linksprinc" id="biblioteca"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -254,20 +254,23 @@
       </div>
     </div>
     <div id="reproductor">
+      <div id="contenedorslidercancion">
+        <p id="duration">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </p>
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value="0"
+          class="slidercancion"
+          id="duracion"
+        />
+        <p id="duration-total">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </p>
+      </div>
       <div id="botones">
-        <div id="contenedorslidercancion">
-          <p id="duration">0</p>
-          <input
-            type="range"
-            min="1"
-            max="100"
-            value="0"
-            class="slidercancion"
-            id="duracion"
-          />
-          <p id="duration-total">0</p>
-        </div>
-
         <button>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -373,7 +376,7 @@
           </svg>
         </button>
       </div>
-      <div id="slider">
+      <div id="slidervolumen">
         <input
           type="range"
           min="1"
@@ -401,6 +404,7 @@
         }
       }
     </script>
+    <script src="js/mediaq.js"></script>
     <script src="js/carrusel.js"></script>
     <script src="js/volver.js"></script>
     <script src="js/cancion.js"></script>

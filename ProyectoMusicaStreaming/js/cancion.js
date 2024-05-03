@@ -6,12 +6,22 @@ function musica(nombre) {
   const pausaButton = document.getElementById("pausa");
   const volumenSlider = document.getElementById("volumen");
   const duracionSlider = document.getElementById("duracion");
-  // Si hay un audio reproduciendose lo pausamos
-  if (audio) {
-    audio.pause();
-  }
+  despausaButton.addEventListener("click", function () {
+    if (audio) {
+      audio.play();
+    }
+  });
+  pausaButton.addEventListener("click", function () {
+    if (audio) {
+      audio.pause();
+    }
+  });
   if (nombre == "p1") {
+    if (audio) {
+      audio.pause();
+    }
     audio = new Audio("music/Maestro_Sin_Igual.mp3");
+    duracionSlider.max = audio.duration;
     audio.play();
 
     //duracion
@@ -22,8 +32,13 @@ function musica(nombre) {
     ajustarVolumen(audio);
   }
   if (nombre == "p2") {
+    if (audio) {
+      audio.pause();
+    }
     audio = new Audio("music/Salon_Vacio.mp3");
+    duracionSlider.max = audio.duration;
     audio.play();
+
     //duracion
     sliderDuracion(audio);
     //logica pausa y despausa
@@ -33,8 +48,13 @@ function musica(nombre) {
   }
 
   if (nombre == "p3") {
+    if (audio) {
+      audio.pause();
+    }
     audio = new Audio("music/Es_tres.mp3");
+    duracionSlider.max = audio.duration;
     audio.play();
+
     //duracion
     sliderDuracion(audio);
     //logica pausa y despausa
@@ -44,7 +64,7 @@ function musica(nombre) {
   }
   function sliderDuracion(audio) {
     audio.addEventListener("loadedmetadata", function () {
-      var duracion = audio.duration;
+      const duracion = audio.duration;
       duracionSlider.max = duracion;
       //actualizar el slider con la duracion del audio
       //asocio los minutos y segundos totales del audio a una varible para
@@ -93,12 +113,6 @@ function musica(nombre) {
   function pausaDespausa(audio) {
     despausaButton.style.display = "none";
     pausaButton.style.display = "block";
-    despausaButton.addEventListener("click", function () {
-      audio.play();
-    });
-    pausaButton.addEventListener("click", function () {
-      audio.pause();
-    });
   }
   function ajustarVolumen(audio) {
     volumenSlider.addEventListener("input", function () {
